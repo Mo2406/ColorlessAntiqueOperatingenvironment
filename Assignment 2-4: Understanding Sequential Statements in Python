@@ -1,0 +1,16 @@
+# input statements
+salary = 1250.0
+numDependents = 2
+# calculate taxes and deductions
+stateTax = 81.25  # 1250.0 * 0.065
+federalTax = 350.0  # 1250.0 * 0.28
+dependentDeduction = 62.5  # 1250.0 * 0.025 * 2
+# calculate total withholding and take-home pay
+totalWithholding = 493.75  # 81.25 + 350.0 + 62.5
+takeHomePay = 756.25  # 1250.0 - 493.75
+# output statements
+print(f"State Tax: ${stateTax}")
+print(f"Federal Tax: ${federalTax}")
+print(f"Dependents: ${dependentDeduction}")
+print(f"Salary: ${salary}")
+print(f"Take-Home Pay: ${takeHomePay}")  # Closing parenthesis added here
