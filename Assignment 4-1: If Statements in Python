@@ -1,0 +1,23 @@
+"""
+This program calculates prices for custom house signs.
+"""
+
+# Declare and initialize variables here.
+charge = 35.00  # Charge for this sign.
+numChars = 18  # Number of characters.
+color = "black"  # Color of characters.
+woodType = "oak"  # Type of wood.
+
+# Write assignment and if statements here as appropriate.
+
+if numChars > 5:
+  charge += (numChars - 5) * 4  # Add extra cost for characters over 5
+
+if color == "gold":
+  charge += 15  # Add extra cost for gold color
+
+if woodType == "oak":
+  charge += 20  # Add extra cost for oak wood
+
+# Output Charge for this sign.
+print("The charge for this sign is $" + str(charge))
