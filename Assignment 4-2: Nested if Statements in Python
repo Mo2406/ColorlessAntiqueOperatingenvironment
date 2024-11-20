@@ -1,0 +1,36 @@
+# Employee Bonus Calculation Program
+
+def calculate_employee_bonus():
+    """
+    Function to calculate an employee's bonus based on productivity score.
+    """
+    # Step 1: Input employee details
+    employee_name = input("Enter Employee Name: ")
+    num_shifts = int(input("Enter number of shifts: "))
+    num_transactions = int(input("Enter number of transactions: "))
+    transaction_value = float(input("Enter transactions dollar value: "))
+
+    # Step 2: Calculate productivity score
+    productivity_score = (transaction_value / num_transactions) / num_shifts
+
+    # Step 3: Initialize bonus
+    bonus = 0
+
+    # Step 4: Determine bonus based on productivity score
+    if productivity_score >= 200:
+        bonus = transaction_value
+    elif productivity_score >= 100:
+        bonus = 50
+    elif 50 <= productivity_score < 100:
+        bonus = 75
+    elif productivity_score >= 25:
+        bonus = 20
+
+    # Step 5: Output results
+    print("Employee Name:", employee_name)
+    print("Employee Bonus: $", round(bonus, 2))
+
+
+# Run the program
+if __name__ == "__main__":
+    calculate_employee_bonus()
